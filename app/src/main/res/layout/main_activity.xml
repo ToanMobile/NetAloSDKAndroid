@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**Created by NetaloTeamAndroid on 2020
+  ~ Company: Netacom.
+  ~  **/
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:ignore="HardcodedText, UnusedAttribute">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editId"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:hint="ID (Required)"
+        android:padding="@dimen/dp_16" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editToken"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:hint="Token (Required)"
+        android:padding="@dimen/dp_16" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editName"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:hint="User Name"
+        android:padding="@dimen/dp_16" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editAvatar"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:hint="Avatar"
+        android:padding="@dimen/dp_16" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editEmail"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:hint="Email"
+        android:padding="@dimen/dp_16"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/layoutTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16"
+        app:constraint_referenced_ids="editId,editToken,editName,editAvatar, editEmail"
+        app:flow_verticalGap="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/layoutLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="btnInitNetalo,btnSdk,btnSdkOpenChatChange,btnSdkOpen,btnSdkOpenChat, btnBlockUser"
+        app:flow_verticalGap="@dimen/dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTop"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/layoutRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="btnSdkThemeGreen,btnSdkThemeOrange,btnCustomUser,btnSdkLogOut,btnSdkListContact, btnStartActivitySdk"
+        app:flow_verticalGap="@dimen/dp_8"
+        app:layout_constraintStart_toEndOf="@+id/layoutLeft"
+        app:layout_constraintTop_toTopOf="@+id/layoutLeft"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInitNetalo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Init NetAlo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdk"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Set User Toan0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkOpenChatChange"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Set User Toan1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkOpen"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Open List Chat" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkOpenChat"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Open SDK chat 1-1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBlockUser"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Block User" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkThemeGreen"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Set Theme Green" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkThemeOrange"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Set Theme Orange" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCustomUser"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Set User Custom" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkLogOut"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="LogOut" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSdkListContact"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="List Contact" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStartActivitySdk"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_bg_grey_text"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Start Gallery" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
