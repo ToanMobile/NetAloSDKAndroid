@@ -62,6 +62,7 @@ class ChatSdkApplication : Application(), Configuration.Provider {
                 hideCreateGroup = true,
                 hideAddInfoInChat = true,
                 hideInfoInChat = true,
+                hideCallInChat = true,
                 classMainActivity = MainActivity::class.java.name
             ),
             neTheme = neTheme
