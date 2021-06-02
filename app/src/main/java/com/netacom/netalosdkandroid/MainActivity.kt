@@ -10,7 +10,6 @@ import com.netacom.base.chat.binding.clickDebounce
 import com.netacom.base.chat.logger.Logger
 import com.netacom.full.ui.sdk.NetAloSDK
 import com.netacom.lite.config.EndPoint
-import com.netacom.lite.define.ColorDefine
 import com.netacom.lite.define.ErrorCodeDefine
 import com.netacom.lite.define.GalleryType
 import com.netacom.lite.entity.ui.local.LocalFileModel
@@ -25,9 +24,9 @@ import kotlinx.coroutines.flow.collect
 @FlowPreview
 class MainActivity : AppCompatActivity() {
 
-    private val user8 = NeUser(id = 281474976981364, token = "39d5ea1267b33be96027f39edfa96972c9078190", username = "Toan 0000")
+    private val user8 = NeUser(id = 281474976981354, token = "9c98a74053f60334758b9dd82d5e8dbe77b5d2b6", username = "Toan 0000")
 
-    private val user9 = NeUser(id = 281474977316610, token = "0a97814ce05d77d44ed9f39169f6f2ddbc345a2d", username = "Toan 1111")
+    private val user9 = NeUser(id = 281474977755104, token = "28eccfda4d9c9cd78d2b775fce4464cb2a24a4ec", username = "Toan 1111")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -11,11 +11,13 @@ android {
 
     defaultConfig {
         applicationId = "com.netacom.netalosdkandroid"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 30
         versionCode = 1
         versionName = "1.0"
-
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi = 19
+        renderscriptSupportModeEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
@@ -44,10 +46,10 @@ android {
 }
 
 dependencies {
-    val hiltVersion = "2.35.1"
-    val sdkNetAloVersion = "1.6.05"
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.appcompat:appcompat:1.2.0")
+    val hiltVersion = "2.36"
+    val sdkNetAloVersion = "1.6.09"
+    implementation("androidx.core:core-ktx:1.5.0")
+    implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
@@ -59,4 +61,6 @@ dependencies {
     releaseImplementation("vn.netacom:NetAloFull:$sdkNetAloVersion") //(for production)
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
+    implementation("androidx.hilt:hilt-work:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
 }

@@ -11,7 +11,6 @@ import android.content.Context
 import androidx.work.Configuration
 import com.netacom.full.ui.sdk.NetAloSDK
 import com.netacom.full.ui.sdk.NetAloSdkCore
-import com.netacom.lite.define.ColorDefine
 import com.netacom.lite.entity.ui.theme.NeTheme
 import com.netacom.lite.sdk.AccountKey
 import com.netacom.lite.sdk.AppID
@@ -38,10 +37,10 @@ class ChatSdkApplication : Application(), Configuration.Provider {
             .build()
 
     private var neTheme = NeTheme(
-        mainColor = ColorDefine.ORANGE_MAIN_COLOR,
-        subColorLight = ColorDefine.ORANGE_SUB_COLOR_LIGHT,
-        subColorDark = ColorDefine.ORANGE_SUB_COLOR_DARK,
-        toolbarDrawable = ColorDefine.ORANGE_MAIN_COLOR,
+        mainColor = "#f5783f",
+        subColorLight = "#F9D9C9",
+        subColorDark = "#683A00",
+        toolbarDrawable = "#f5783f",
     )
 
     override fun attachBaseContext(base: Context?) {
@@ -61,8 +60,8 @@ class ChatSdkApplication : Application(), Configuration.Provider {
                 isSyncContact = false,
                 hidePhone = true,
                 hideCreateGroup = true,
-                hideAddInfo = true,
-                hideInfo = true,
+                hideAddInfoInChat = true,
+                hideInfoInChat = true,
                 classMainActivity = MainActivity::class.java.name
             ),
             neTheme = neTheme
